@@ -6,10 +6,10 @@ from tweepy import OAuthHandler
 class tClient(object):
 
     def __init__(self):
-        API_KEY = "wrkfGtlO8MNC48rmp3LCgfBTL"
-        API_SECRET = "1heD6NmvUNIGb5z8Gq1DOQXsHJsZLP8Ght6G6wi5RuF2FwN6wd"
-        ACCESS_TOKEN = "1335744879369052160-kQyoz9nD9UJJRSQqKL8XlNr8JWYemZ"
-        ACCESS_TOKEN_SECRET = "DsqvQSdtnpUf3qsC93dgB0IOC1sO1bdUGba9aclSAhRxN"
+        API_KEY = "API_KEY"
+        API_SECRET = "API_SECRET"
+        ACCESS_TOKEN = "ACCESS_TOKEN"
+        ACCESS_TOKEN_SECRET = "ACCESS_TOKEN_SECRET"
 
         try:
             self.auth = OAuthHandler(API_KEY, API_SECRET)
