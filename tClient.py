@@ -6,10 +6,10 @@ from tweepy import OAuthHandler
 class tClient(object):
 
     def __init__(self):
-        API_KEY = "API_KEY"
-        API_SECRET = "API_SECRET"
-        ACCESS_TOKEN = "ACCESS_TOKEN"
-        ACCESS_TOKEN_SECRET = "ACCESS_TOKEN_SECRET"
+        API_KEY = "API KEY HERE"
+        API_SECRET = "API SECRET HERE"
+        ACCESS_TOKEN = "ACCESS TOKEN HERE"
+        ACCESS_TOKEN_SECRET = "ACCESS TOKEN SECRET HERE"
 
         try:
             self.auth = OAuthHandler(API_KEY, API_SECRET)
@@ -25,7 +25,7 @@ class tClient(object):
         tweets = []
 
         try:
-            fetched_tweets = self.api.search(q=query, count=count)
+            fetched_tweets = self.api.search_tweets(q=query, count=count)
 
             for tweet in fetched_tweets:
                 parsed_tweet = {}
@@ -37,5 +37,5 @@ class tClient(object):
                     tweets.append(tweet.text)
             return tweets
 
-        except tweepy.TweepError as e:
+        except tweepy.TweepyException as e:
             print("Error : " + str(e))
