@@ -1,6 +1,6 @@
 Project for HackUIowa 2021 Hackathon
 
-NOTE: Requires downloading the NLTK Python library beforehand
+NOTE: Requires downloading the NLTK Python library before running
 
 This project allows for the user to enter a search term that they would like to put on twitter.
 Along with this the user can enter the amount of tweets they would like to search through.
