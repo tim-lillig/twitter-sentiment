@@ -1,11 +1,8 @@
-
 from tClient import *
-import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 import tkinter
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-
 
 twitter = tClient()
 
@@ -28,8 +25,8 @@ def add(x,y):
 
     plt.scatter(x, y, color='r')
 
-    plt.xlabel('Number of Tweet')
-    plt.ylabel('Positivity of tweet')
+    plt.xlabel('Number of Tweets')
+    plt.ylabel('Sentiment of Tweets')
     plt.title('Keyword analysis')
 
     canvas = FigureCanvasTkAgg(Globals.plot, Globals.bottomFrame)
@@ -108,16 +105,16 @@ def initializeGUI():
     numTweetsLabel = tkinter.Label(topFrame, text='Number of Tweets:')
     numTweetsLabel.grid(row=1,columnspan=6)
 
-    numTweetRadio1 = tkinter.Radiobutton(middleFrame, text='50', variable=Globals.choiceVar, value=50)
+    numTweetRadio1 = tkinter.Radiobutton(middleFrame, text='10', variable=Globals.choiceVar, value=10)
     numTweetRadio1.grid(row=0,column=0)
 
-    numTweetRadio2 = tkinter.Radiobutton(middleFrame, text='100', variable=Globals.choiceVar, value=100)
+    numTweetRadio2 = tkinter.Radiobutton(middleFrame, text='25', variable=Globals.choiceVar, value=25)
     numTweetRadio2.grid(row=0, column=1)
 
-    numTweetRadio3 = tkinter.Radiobutton(middleFrame, text='250', variable=Globals.choiceVar, value=250)
+    numTweetRadio3 = tkinter.Radiobutton(middleFrame, text='50', variable=Globals.choiceVar, value=50)
     numTweetRadio3.grid(row=0, column=2)
 
-    numTweetRadio4 = tkinter.Radiobutton(middleFrame, text='500', variable=Globals.choiceVar, value=500)
+    numTweetRadio4 = tkinter.Radiobutton(middleFrame, text='100', variable=Globals.choiceVar, value=100)
     numTweetRadio4.grid(row=0, column=3)
 
     Globals.searchButton = tkinter.Button(topFrame, text='Search', command=lambda: master(Globals.searchTermEntry.get(), Globals.choiceVar.get()))
